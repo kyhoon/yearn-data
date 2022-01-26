@@ -35,14 +35,9 @@ Testing | Daily | 11/01/2021 | 01/26/2022 | 87
 The `observables` are the daily token price, reserve, and volume for each token, which leads to a total of 3 x 16 = 48 columns.
 The `targets` are the estimated daily returns for each token pool, which was calculated by the following:
 
-$$
-\begin{align*}
-\text{Total Return (\%)} &= \text{Trading Fee (\%)} + \text{Impermanent Loss (\%)} \\
-&= \text{Fee Rate} \times \sqrt{\text{Price Change}} \times \text{Volume} / \text{Reserve} \\
-&+ (2 \times \sqrt{\text{Price Change}} / (1 + \text{Price Change}) - 1.0) \times 100
-\end{align*}
-$$
-where $\text{Fee Rate}$ is given as 0.3 in Sushiswap and $\text{Price Change}$ is defined as $\text{Price}_t / \text{Price}_{t-1}$.
+![formula](./formula.png)
+
+where *Fee Rate* is given as 0.3 in Sushiswap and *Price Change* is defined as *Price_t / Price_t-1*.
 Due to the shift (or lag) operator involved in the calculation, the `targets` start from 09/14/2020 whereas the `observables` start from 09/13/2020 for the `train` dataset.
 
 
