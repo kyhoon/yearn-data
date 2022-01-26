@@ -2,6 +2,7 @@
 
 Last updated on 01/26/2022.
 
+All data is crawled from the Ethereum Mainnet.
 
 ## sushiswap
 
@@ -10,9 +11,9 @@ Data was crawled from [one of the subgraphs on The Graph](https://thegraph.com/h
 
 File names within the directory follow the pattern of `[token0]&[token1].csv`.
 
-Column Name | Data Type
-:--|:--
-datetime | datetime (UTC)
+Column Name | Data Type | Description
+:--|:--|:--
+datetime | datetime (UTC) | Datetime when the block was created
 liquidityProviderCount | int
 reserve0 | float
 reserve1 | float
@@ -35,9 +36,9 @@ Data was crawled from the [hosted service on The Graph](https://thegraph.com/hos
 
 File names within the directory follow the pattern of `[token0]&[token1].csv`.
 
-Column Name | Data Type
-:--|:--
-datetime | datetime (UTC)
+Column Name | Data Type | Description
+:--|:--|:--
+datetime | datetime (UTC) | Datetime when the block was created
 liquidityProviderCount | int
 reserve0 | float
 reserve1 | float
@@ -58,9 +59,9 @@ volumeUSD | float
 On-chain data for the strategies deployed/revoked in the V2 Vaults at Yearn.
 Data was crawled using a local version of the wonderful [yearn-exporter](https://github.com/yearn/yearn-exporter).
 
-Column Name | Data Type
-:--|:--
-timestamp | datetime (UTC)
+Column Name | Data Type | Description
+:--|:--|:--
+timestamp | datetime (UTC) | Datetime when the block was created
 vault | string
 strategy | string
 activation | timestamp \| int
