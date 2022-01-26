@@ -4,6 +4,12 @@ Last updated on 01/26/2022.
 
 All data is crawled from the Ethereum Mainnet.
 
+
+## lp-strategies
+
+Customized toy dataset from Sushiswap data for the performance evaluation of various statistical models, please see the [README file](lp-strategies/README.md) for more information.
+
+
 ## sushiswap
 
 On-chain data for the pairs listed in Sushiswap.
