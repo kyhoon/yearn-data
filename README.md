@@ -7,7 +7,7 @@ All data is crawled from the Ethereum Mainnet.
 
 ## lp-strategies
 
-Customized toy dataset from Sushiswap data for the performance evaluation of various statistical models, please see the [README file](lp-strategies/README.md) for more information.
+Customized toy dataset from Sushiswap data for the performance evaluation of various statistical models. Please see the separate [README file](lp-strategies/) for more information.
 
 
 ## sushiswap
