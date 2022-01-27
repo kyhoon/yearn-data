@@ -1,25 +1,43 @@
 # LP strategies
 
-Last updated on 01/26/2022.
+Last updated on 01/27/2022.
 
-This dataset consists of the daily token price, reserve, and volume data of 16 different WETH pools in Sushiswap, from 09/14/2020 to 01/26/2022.
+This dataset consists of the daily token price, reserve, and volume data of 34 different WETH pools in Uniswap V2, from 09/14/2020 to 01/26/2022.
 The list of tokens is as follows:
 
-- BAND
+- ALBT
+- CEL
 - COMP
 - DAI
+- DPI
+- FARM
+- HEX
+- KEEP
+- LEASH
 - LINK
+- LRC
+- MANA
+- MATIC
+- MKR
+- PERP
+- PICKLE
 - REN
+- RSR
+- SAND
+- SHIB
 - SNX
-- SRM
-- SUSD
+- STAKE
+- STRONG
 - SUSHI
-- UMA
 - USDC
+- WBTC
 - AMP
 - AMPL
 - CRV
+- RENBTC
+- SWAP
 - USDT
+- XOR
 - YFI
 
 The dataset has two versions, `train` and `test`.
@@ -37,14 +55,15 @@ The `targets` are the estimated daily returns for each token pool, which was cal
 
 ![formula](./formula.png)
 
-where *Fee Rate* is given as 0.3 in Sushiswap and *Price Change* is defined as *Price_t / Price_t-1*.
+where *Fee Rate* is given as 0.3 in Uniswap V2 and *Price Change* is defined as *Price_t / Price_t-1*.
 Due to the shift (or lag) operator involved in the calculation, the `targets` start from 09/14/2020 whereas the `observables` start from 09/13/2020 for the `train` dataset.
 
 
 ## Benchmarks
 
 Below shows the average performance for some benchmark models, aggregated from 10 different random seeds.
-The performance was measured as the sum of Root-Mean-Square Error (RMSE) from the `targets` of each token pool.
+The performance was measured as the sum of Root-Mean-Square Error (RMSE) from the `targets` of each token pool ignoring outliers.
+Outliers were defined as the data points that are further than 3 x IQR (Interquartile range) from the first and third quartiles.
 The performance was measured for the testing period (11/01/2021 - 01/26/2022).
 
 
@@ -52,15 +71,15 @@ The performance was measured for the testing period (11/01/2021 - 01/26/2022).
 
 Model Name | ΣRMSE | Std
 :--|:--:|:--:
-Previous Day | 0.1846 | -
-Moving Average (10 days) | 0.0843 | -
-Random Forest | 0.1262 | 0.0062
+Previous Day | 4.0118 | -
+Moving Average (10 days) | 2.5889 | -
+Linear Regression | 1.9541 | 0.0009
 
 
 ### Long-term Forecast - 10 Days
 
 Model Name | ΣRMSE | Std
 :--|:--:|:--:
-Previous Day | 0.1756 | -
-Moving Average (10 days) | 0.1024 | -
-Random Forest | 0.2420 | 0.0102
+Previous Day | 5.7305 | -
+Moving Average (10 days) | 2.7537 | -
+Linear Regression | 1.9533 | 0.0007
