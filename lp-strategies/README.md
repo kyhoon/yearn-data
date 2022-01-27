@@ -63,7 +63,7 @@ Due to the shift (or lag) operator involved in the calculation, the `targets` st
 
 Below shows the average performance for some benchmark models, aggregated from 10 different random seeds.
 The performance was measured as the sum of Root-Mean-Square Error (RMSE) from the `targets` of each token pool ignoring outliers.
-Outliers were defined as the data points that are further than 3 x IQR (Interquartile range) from the first and third quartiles.
+Outliers were defined as the data points that are further than 1.5 x IQR (Interquartile range) from the first and third quartiles.
 The performance was measured for the testing period (11/01/2021 - 01/26/2022).
 
 
@@ -71,15 +71,15 @@ The performance was measured for the testing period (11/01/2021 - 01/26/2022).
 
 Model Name | ΣRMSE | Std
 :--|:--:|:--:
-Previous Day | 4.0118 | -
-Moving Average (10 days) | 2.5889 | -
-Linear Regression | 1.9541 | 0.0009
+Previous Day | 3.8291 | -
+Moving Average (10 days) | 2.3202 | -
+Linear Regression | 1.5110 | 0.0006
 
 
 ### Long-term Forecast - 10 Days
 
 Model Name | ΣRMSE | Std
 :--|:--:|:--:
-Previous Day | 5.7305 | -
-Moving Average (10 days) | 2.7537 | -
-Linear Regression | 1.9533 | 0.0007
+Previous Day | 5.6349 | -
+Moving Average (10 days) | 2.4263 | -
+Linear Regression | 1.5053 | 0.0004
