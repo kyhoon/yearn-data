@@ -73,8 +73,8 @@ Model Name | ΣRMSE | Std
 :--|:--:|:--:
 Previous Day | 3.8291 | -
 Moving Average (10 days) | 2.3202 | -
-Linear Regression | 1.4076 | 0.0016
-Robust Regression + Stepwise OLS | 1.6885 | -
+Linear Regression | 1.5383 | 0.0015
+Robust Regression + Stepwise OLS | 1.7495 | -
 Prophet (default) | 1.6217 | -
 
 
@@ -84,6 +84,6 @@ Model Name | ΣRMSE | Std
 :--|:--:|:--:
 Previous Day | 5.6349 | -
 Moving Average (10 days) | 2.4263 | -
-Linear Regression | 1.3787 | 0.0019
-Robust Regression + Stepwise OLS | 1.6378 | -
+Linear Regression | 1.5209 | 0.0012
+Robust Regression + Stepwise OLS | 1.7510 | -
 Prophet (default) | 1.6684 | -
