@@ -75,11 +75,11 @@ Model Name | ΣRMSE | Std
 :--|:--:|:--:
 Previous Day | 3.8291 | -
 Moving Average (10 days) | 2.3202 | -
-Moving Average (200 days) | 1.7440 | -
-Linear Regression | 1.4407 | 0.0024
 Robust Regression + Stepwise OLS | 1.7495 | -
+Moving Average (200 days) | 1.7440 | -
 Prophet (default) | 1.6217 | -
-Vector Autoregression | **1.4222** | **0.0018**
+Linear Regression (SGD) | 1.4407 | 0.0024
+Vector Autoregression (SGD) | 1.4020 | 0.0008
 
 
 ### Long-term Forecast - 10 Days
@@ -89,7 +89,7 @@ Model Name | ΣRMSE | Std
 Previous Day | 5.6349 | -
 Moving Average (10 days) | 2.4263 | -
 Moving Average (200 days) | 1.7545 | -
-Linear Regression | 1.4467 | 0.0019
 Robust Regression + Stepwise OLS | 1.7510 | -
 Prophet (default) | 1.6684 | -
-Vector Autoregression | **1.4338** | **0.0015**
+Linear Regression (SGD) | 1.4467 | 0.0019
+Vector Autoregression (SGD) | 1.4048 | 0.0005
