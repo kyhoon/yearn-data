@@ -51,7 +51,7 @@ Testing | Daily | 11/01/2021 | 01/26/2022 | 87
 
 
 The `observables` are the daily token price, reserve, and volume for each token, which leads to a total of 3 x 16 = 48 columns.
-The `targets` are the estimated daily returns for each token pool, which was calculated by the following:
+The `targets` are the estimated daily returns for each token pool, which were calculated by the following:
 
 ![formula](./formula.png)
 
@@ -60,6 +60,8 @@ Due to the shift (or lag) operator involved in the calculation, the `targets` st
 
 
 ## Benchmarks
+
+Last updated on 01/29/2022.
 
 Below shows the average performance for some benchmark models, aggregated from 10 different random seeds.
 The performance was measured as the sum of Root-Mean-Square Error (RMSE) from the `targets` of each token pool ignoring outliers.
@@ -73,7 +75,7 @@ Model Name | ΣRMSE | Std
 :--|:--:|:--:
 Previous Day | 3.8291 | -
 Moving Average (10 days) | 2.3202 | -
-Linear Regression | 1.5383 | 0.0015
+Linear Regression | 1.4721 | 0.0011
 Robust Regression + Stepwise OLS | 1.7495 | -
 Prophet (default) | 1.6217 | -
 
@@ -84,6 +86,6 @@ Model Name | ΣRMSE | Std
 :--|:--:|:--:
 Previous Day | 5.6349 | -
 Moving Average (10 days) | 2.4263 | -
-Linear Regression | 1.5209 | 0.0012
+Linear Regression | 1.4477 | 0.0011
 Robust Regression + Stepwise OLS | 1.7510 | -
 Prophet (default) | 1.6684 | -
